@@ -1,4 +1,4 @@
-# test-rpc
+# rpc-eval
 
 ```sh
 bun run blocks.ts [endpoint]
