@@ -1,0 +1,219 @@
+name: Eval Blocks
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  blocks-optimism:
+    name: blocks (https://mainnet.optimism.io)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://mainnet.optimism.io
+  blocks-base:
+    name: blocks (https://mainnet.base.org)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://mainnet.base.org
+  blocks-arbitrum:
+    name: blocks (https://arb1.arbitrum.io/rpc)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://arb1.arbitrum.io/rpc
+  blocks-blast:
+    name: blocks (https://rpc.blast.io)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://rpc.blast.io
+  blocks-celo:
+    name: blocks (https://forno.celo.org)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://forno.celo.org
+  blocks-cloudflare-eth:
+    name: blocks (https://cloudflare-eth.com)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://cloudflare-eth.com
+  blocks-1rpc-mainnet:
+    name: blocks (https://1rpc.io/eth)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://1rpc.io/eth
+  blocks-ankr-mainnet:
+    name: blocks (https://rpc.ankr.com/eth)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://rpc.ankr.com/eth
+  blocks-llamarpc-mainnet:
+    name: blocks (https://eth.llamarpc.com)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth.llamarpc.com
+  blocks-omniatech-mainnet:
+    name: blocks (https://endpoints.omniatech.io/v1/eth/mainnet/public)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://endpoints.omniatech.io/v1/eth/mainnet/public
+
+  blocks-publicnode-mainnet:
+    name: blocks (https://ethereum-rpc.publicnode.com)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://ethereum-rpc.publicnode.com
+
+  blocks-payload-mainnet:
+    name: blocks (https://rpc.payload.de)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://rpc.payload.de
+
+  blocks-blastapi-mainnet:
+    name: blocks (https://eth-mainnet.public.blastapi.io)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth-mainnet.public.blastapi.io
+
+  blocks-meowrpc-mainnet:
+    name: blocks (https://eth.meowrpc.com)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth.meowrpc.com
+
+  blocks-drpc-mainnet:
+    name: blocks (https://eth.drpc.org)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth.drpc.org
+
+  blocks-merkle-mainnet:
+    name: blocks (https://eth.merkle.io)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth.merkle.io
+
+  blocks-nodeconnect-mainnet:
+    name: blocks (https://eth.nodeconnect.org)
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+      - run: bun run blocks.ts https://eth.nodeconnect.org
