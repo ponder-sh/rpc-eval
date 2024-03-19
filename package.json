@@ -10,6 +10,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@ponder/utils": "^0.1.1",
     "viem": "^2.8.6"
   }
 }

@@ -1,3 +1,4 @@
+import { rateLimit } from "@ponder/utils";
 import { http, type Hex, createClient, extractChain, hexToNumber } from "viem";
 import { getBlock } from "viem/actions";
 import * as chains from "viem/chains";
@@ -17,7 +18,7 @@ const chain = extractChain({
 
 const client = createClient({
   chain,
-  transport: http(rpc),
+  transport: rateLimit(http(rpc), { requestsPerSecond: 1 }),
 });
 
 const main = async () => {
