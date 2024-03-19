@@ -1,7 +1,7 @@
 import * as chains from "viem/chains";
 
 let out = `
-name: Eval Blocks
+name: Eval Blocks (generated)
 
 on:
   schedule:
