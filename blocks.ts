@@ -1,5 +1,5 @@
 import { http, type Hex, createClient, extractChain, hexToNumber } from "viem";
-import { getBlock, getBlockNumber } from "viem/actions";
+import { getBlock } from "viem/actions";
 import * as chains from "viem/chains";
 
 const rpc = process.argv[2] as string;

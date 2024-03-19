@@ -140,7 +140,9 @@ jobs:
       - run: bun install
       - run: bun run blocks.ts https://ethereum-rpc.publicnode.com
 
+  # eth_chainId returns undefined
   blocks-payload-mainnet:
+    if: false
     name: blocks (https://rpc.payload.de)
     runs-on: "ubuntu-latest"
 
