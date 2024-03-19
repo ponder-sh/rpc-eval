@@ -12,6 +12,15 @@ jobs:
 `;
 
 for (const chain of Object.values(chains)) {
+  if (
+    chain.name === chains.foundry.name ||
+    chain.name === chains.anvil.name ||
+    chain.name === chains.localhost.name ||
+    chain.name === chains.hardhat.name ||
+    chain.name === chains.moonbeamDev.name
+  )
+    continue;
+
   let i = 0;
   for (const rpc of chain.rpcUrls.default.http) {
     out = out.concat(`
